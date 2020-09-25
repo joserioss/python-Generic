@@ -1,30 +1,12 @@
-class Persona:
-    def __init__(self,nombre,edad):
-        self.nombre=nombre
-        self.edad=edad
+def operar(v1,v2,fn):
+    return fn(v1,v2)
 
-    def es_mayor(self,fn):
-        return fn(self.edad)
+resu1=operar(10,3,lambda x1,x2: x1+x2)
+print(resu1)
 
-def mayor_estadosunidos(edad):
-    if edad>=21:
-        return True
-    else:
-        return False
+resu2=operar(10,3,lambda x1,x2: x1-x2)
+print(resu2)
 
-def mayor_chile(edad):
-    if edad>=18:
-        return True
-    else:
-        return False
+print(operar(30,10,lambda x1,x2: x1*x2))
 
-
-persona1=Persona("juan", 18)
-if persona1.es_mayor(mayor_chile):
-    print(f"{persona1.nombre} es mayor si vive en Chile")
-else:
-    print(f"{persona1.nombre} no es mayor si vive en Chile")
-if persona1.es_mayor(mayor_estadosunidos):
-    print(f"{persona1.nombre} es mayor si vive en Estados Unidos")
-else:
-    print(f"{persona1.nombre} no es mayor si vive en Estados Unidos")
+print(operar(10,2,lambda x1,x2: x1/x2))
