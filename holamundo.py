@@ -1,22 +1,30 @@
-class Empleado:
+class Operacion:
 
     def __init__(self):
-        self.nombre=input("Ingrese el nombre del empleado:")
-        self.sueldo=float(input("Ingrese el sueldo:"))
+        self.valor1=int(input("Ingrese primer valor:"))
+        self.valor2=int(input("Ingrese segundo valor:"))
+        self.sumar()
+        self.restar()
+        self.multiplicar()
+        self.dividir()
 
-    def imprimir(self):
-        print("Nombre:",self.nombre)
-        print("Sueldo:",self.sueldo)
+    def sumar(self):
+        suma=self.valor1+self.valor2
+        print("La suma es",suma)
 
-    def paga_impuestos(self):
-        if self.sueldo>3000:
-            print("Debe pagar impuestos")
-        else:
-            print("No paga impuestos")
+    def restar(self):
+        resta=self.valor1-self.valor2
+        print("La rersta es",resta)
+
+    def multiplicar(self):
+        multi=self.valor1*self.valor2
+        print("El producto es",multi)
+
+    def dividir(self):
+        divi=self.valor1/self.valor2
+        print("La division es",divi)
 
 
 # bloque principal
 
-empleado1=Empleado()
-empleado1.imprimir()
-empleado1.paga_impuestos()
+operacion1=Operacion()
