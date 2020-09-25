@@ -1,5 +1,4 @@
-archi1=open("datos.txt","w") 
-archi1.write("Primer línea.\n") 
-archi1.write("Segunda línea.\n") 
-archi1.write("Tercer línea.\n")  
-archi1.close() 
+archi1=open("datos.txt","r")
+for linea in archi1:
+    print(linea, end='')
+archi1.close()
