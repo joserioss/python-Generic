@@ -1,3 +1,4 @@
-sueldo=int(input("Ingrese cual es su sueldo:"))
-if sueldo>3000:
-    print("Esta persona debe abonar impuestos")
+x = 0
+while x<=10:
+    print(x)
+    x=x+2
