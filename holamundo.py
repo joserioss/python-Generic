@@ -1,4 +1,9 @@
-lista=[2, 3, 50, 7, 9]
+def imprimir(paises):
+    for clave in paises:
+        print(clave, paises[clave])
 
-for elemento in lista:
-    print(elemento)
+
+# bloque principal
+
+paises={"argentina":40000000, "españa":46000000, "brasil":190000000, "uruguay": 3400000}
+imprimir(paises)
