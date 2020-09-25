@@ -1,4 +1,8 @@
+archi1=open("datos.txt","a")
+archi1.write("nueva línea 1\n")
+archi1.write("nueva línea 2\n")
+archi1.close()
 archi1=open("datos.txt","r")
-for linea in archi1:
-    print(linea, end='')
+contenido=archi1.read()
+print(contenido)
 archi1.close()
