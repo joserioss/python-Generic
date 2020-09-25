@@ -1,9 +1,18 @@
-def imprimir(paises):
-    for clave in paises:
-        print(clave, paises[clave])
+class Persona:
+
+    def inicializar(self,nom):
+        self.nombre=nom
+
+    def imprimir(self):
+        print("Nombre",self.nombre)
 
 
 # bloque principal
 
-paises={"argentina":40000000, "españa":46000000, "brasil":190000000, "uruguay": 3400000}
-imprimir(paises)
+persona1=Persona()
+persona1.inicializar("Pedro")
+persona1.imprimir()
+
+persona2=Persona()
+persona2.inicializar("Carla")
+persona2.imprimir()
