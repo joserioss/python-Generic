@@ -1,28 +1,22 @@
-class Alumno:
+class Empleado:
 
-    def inicializar(self,nombre,nota):
-        self.nombre=nombre
-        self.nota=nota
+    def __init__(self):
+        self.nombre=input("Ingrese el nombre del empleado:")
+        self.sueldo=float(input("Ingrese el sueldo:"))
 
     def imprimir(self):
         print("Nombre:",self.nombre)
-        print("Nota:",self.nota)
+        print("Sueldo:",self.sueldo)
 
-    def mostrar_estado(self):
-        if self.nota>=4:
-            print("Aprobado")
+    def paga_impuestos(self):
+        if self.sueldo>3000:
+            print("Debe pagar impuestos")
         else:
-            print("Reprobado")
+            print("No paga impuestos")
 
 
 # bloque principal
 
-alumno1=Alumno()
-alumno1.inicializar("diego",2)
-alumno1.imprimir()
-alumno1.mostrar_estado()
-
-alumno2=Alumno()
-alumno2.inicializar("ana",10)
-alumno2.imprimir()
-alumno2.mostrar_estado()
+empleado1=Empleado()
+empleado1.imprimir()
+empleado1.paga_impuestos()
